@@ -221,7 +221,6 @@ section{
     to{ transform: rotate(360deg); }
 }
 
-/* keeps each logo upright while the orbit turns */
 @keyframes counter-spin{
     from{ transform: rotate(calc(var(--angle) * -1)); }
     to{ transform: rotate(calc(var(--angle) * -1 - 360deg)); }
@@ -452,7 +451,6 @@ section{
     background: linear-gradient(to bottom, var(--red), var(--red-dark));
 }
 
-/* Small desktop and below: links move into the menu button's dropdown */
 @media (max-width: 1000px){
     .menu-btn{
         display: flex;
@@ -487,7 +485,6 @@ section{
     }
 }
 
-/* Tablet / mobile */
 @media (max-width: 900px){
     section{
         min-height: auto;
@@ -537,7 +534,6 @@ section{
     }
 }
 
-/* Phones */
 @media (max-width: 600px){
     header{
         padding: 0.5rem 0.6rem 0.5rem 1.2rem;
