@@ -14,4 +14,5 @@
 
 <p>Same with this part</p>
 
-<img width="1897" height="971" alt="image" src="https://github.com/user-attachments/assets/b2741a3a-7138-4891-a60a-3f3e24f24077" />
+<img width="1894" height="971" alt="image" src="https://github.com/user-attachments/assets/2363304f-de42-442d-ac08-6440d062abf0" />
+
