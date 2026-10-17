@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#about" class="logo"><span>Ronnie Saturinas</span></a>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="visit-btn">Visit GitHub</button>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="profile">
+                <img class="profile-img" src="image2.jpg" alt="Ronnie Saturinas">
+                <div class="orbit">
+                    <div class="orbit-item" style="--angle: 0deg;"><img src="html.png" alt="HTML5"></div>
+                    <div class="orbit-item" style="--angle: 120deg;"><img src="css.png" alt="CSS3"></div>
+                    <div class="orbit-item" style="--angle: 240deg;"><img src="javascript.png" alt="JavaScript"></div>
+                </div>
+            </div>
+            <div class="info-box">
+
+                <div class="text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Ronnie Saturinas</h1>
+                    <span>Frontend Developer</span>
+                </div>
+
+                <div class="btn-group">
+                    <div class="btn">Download CV</div>
+                    <div class="btn">Contact</div>
+                </div>
+
+                <div class="socials">
+                    <i class="fa-brands fa-square-gitlab"></i>
+                    <i class="fa-solid fa-link"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+
+        <h2 class="section-title">Experiences</h2>
+
+        <div class="experience-info">
+
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Frontend Developer</span>
+                    <h3>1 year</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, placeat.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span>Backend Developer</span>
+                    <h3>1 year</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, placeat.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-list"></i>
+                    <span>Graphic Designer</span>
+                    <h3>1 year</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, placeat.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-table"></i>
+                    <span>Excel</span>
+                    <h3>1 year</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, placeat.</p>
+                </div>
+            </div>
+
+            <img src="image2.jpg" alt="Ronnie Saturinas">
+        </div>
+    </section>
+
+    <section id="project" class="project">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <!-- Replace this div with: <img src="project-x.png" alt="Project X"> -->
+                <div class="project-img img-purple"><i class="fa-solid fa-image"></i></div>
+                <h3>LOST and FOUND</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, officia.</p>
+                <div class="btn-group">
+                    <a href="#" class="btn">Live Demo</a>
+                    <a href="#" class="btn">Github Repo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img img-violet"><i class="fa-solid fa-image"></i></div>
+                <h3>I LOVE RYU SARANG</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, officia.</p>
+                <div class="btn-group">
+                    <a href="#" class="btn">Live Demo</a>
+                    <a href="#" class="btn">Github Repo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img img-orange"><i class="fa-solid fa-image"></i></div>
+                <h3>CLEANCE Eclaro Academy</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, officia.</p>
+                <div class="btn-group">
+                    <a href="#" class="btn">Live Demo</a>
+                    <a href="#" class="btn">Github Repo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+            <p>Want to work together? Get in touch.</p>
+            <div class="btn-group">
+                <div class="btn">Email Me</div>
+                <div class="btn">GitHub</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
