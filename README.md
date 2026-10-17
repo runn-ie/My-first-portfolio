@@ -8,7 +8,7 @@
 
 <p>I made this part simple looking as much as possible</p>
 
-<img width="1898" height="856" alt="image" src="https://github.com/user-attachments/assets/92acf30e-e76d-475e-8b86-ef4c9c55a956" />
+<img width="1896" height="969" alt="image" src="https://github.com/user-attachments/assets/56bd302f-3f9e-4d94-9e9d-5d8db2f452d8" />
 
 <h1>PROJECTS</h1>
 
