@@ -2,7 +2,7 @@
 
 <p>I made it red to make it more colorful or more visibly since that is my fav color</p>
 
-<img width="1891" height="907" alt="image" src="https://github.com/user-attachments/assets/4265fefe-c3d0-446d-b33c-6408141749f5" />
+<img width="1898" height="875" alt="image" src="https://github.com/user-attachments/assets/c12075d9-b128-4f80-b314-f5c87748976f" />
 
 <h1>EXPERIENCES</h1>
 
