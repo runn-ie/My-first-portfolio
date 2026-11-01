@@ -21,8 +21,14 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#project">Project</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=choijiwoo200917@gmail.com" target="_blank" rel="noopener noreferrer">Contact</a></li>
         </ul>
+
+        <button class="theme-btn" id="theme-btn" type="button"
+                aria-label="Switch to light color theme" aria-pressed="false">
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            <span>Light</span>
+        </button>
 
         <a href="https://github.com/runn-ie/My-first-portfolio" class="visit-btn" target="_blank" rel="noopener noreferrer">
         Visit GitHub
@@ -54,14 +60,18 @@
 
                 <div class="btn-group">
                     <div class="btn">Download CV</div>
-                    <div class="btn">Contact</div>
+                    <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=choijiwoo200917@gmail.com" target="_blank" rel="noopener noreferrer">Contact</a>
                 </div>
 
                 <div class="socials">
-                <a href="https://github.com/runn-ie" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-  <i class="fa-brands fa-github"></i>
+                <a style="color: red;" href="https://github.com/runn-ie" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
                 </a>
-                    <i class="fa-solid fa-link"></i>
+                <a style="color: red;" href="https://www.facebook.com/share/1KC5io8omp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+                </a>
+                </a>
+                </a>
                 </div>
             </div>
         </div>
@@ -143,12 +153,88 @@
         <div class="contact-info">
             <p>Want to work together? Get in touch.</p>
             <div class="btn-group">
-                <div class="btn">Email Me</div>
+                <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=choijiwoo200917@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a>
                 <div class="btn">GitHub</div>
             </div>
         </div>
     </section>
 
+    <script>
+        (() => {
+            const themeButton = document.getElementById("theme-btn");
+            if (!themeButton) return;
+
+            const icon = themeButton.querySelector("i");
+            const label = themeButton.querySelector("span");
+
+            function applyTheme(theme) {
+                const isLight = theme === "light";
+                document.documentElement.dataset.theme = isLight ? "light" : "dark";
+                themeButton.setAttribute("aria-pressed", String(isLight));
+                themeButton.setAttribute(
+                    "aria-label",
+                    isLight ? "Switch to dark color theme" : "Switch to light color theme"
+                );
+                icon.className = isLight ? "fa-solid fa-moon" : "fa-solid fa-sun";
+                label.textContent = isLight ? "Night" : "Light";
+            }
+
+            const savedTheme = localStorage.getItem("portfolio-theme");
+            applyTheme(savedTheme === "light" ? "light" : "dark");
+
+            themeButton.addEventListener("click", () => {
+                const nextTheme =
+                    document.documentElement.dataset.theme === "light" ? "dark" : "light";
+                applyTheme(nextTheme);
+                localStorage.setItem("portfolio-theme", nextTheme);
+            });
+        })();
+    </script>
+    <script>
+
+        (() => {
+            const menuButton = document.getElementById("menu-btn");
+            const navLinks = document.getElementById("nav-links");
+            if (!menuButton || !navLinks) return;
+
+            const closeMenu = () => {
+                navLinks.classList.remove("active");
+                menuButton.classList.remove("open");
+                menuButton.setAttribute("aria-expanded", "false");
+            };
+
+            const toggleMenu = () => {
+                const willOpen = !navLinks.classList.contains("active");
+                navLinks.classList.toggle("active", willOpen);
+                menuButton.classList.toggle("open", willOpen);
+                menuButton.setAttribute("aria-expanded", String(willOpen));
+            };
+
+            menuButton.type = "button";
+            menuButton.addEventListener("click", (event) => {
+                event.stopPropagation();
+                toggleMenu();
+            });
+
+            navLinks.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", closeMenu);
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!navLinks.contains(event.target) && !menuButton.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") closeMenu();
+            });
+
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 1000) closeMenu();
+            });
+        })();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
